@@ -1,0 +1,7 @@
+#app{"ng-app" => "CottageApp"}
+  #data{"ng-controller" => "CottageNgController as cc"} 
+    Last Update: {{cc.clock}}
+    %br
+    =@temps
+    #spot-price-chart-container
+      %highchart{id: "mainTempChart", config: "cc.chartConfig"}

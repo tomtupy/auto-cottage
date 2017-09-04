@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Web
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %nav.navbar.navbar-toggleable-md.navbar-dark.bg-dark{role:"navigation"}
+      %a.navbar-brand{href:"#"}
+        TomTupy.com Rapsberry Pi
+      %ul.navbar-nav.mr-auto
+        %li.nav-item.active
+          %a.nav-link{href:"#"} Cottage
+        %li.nav-item
+          %a.nav-link{href:"#"} Brew
+    .container-fluid{style: "margin-top: 5rem"}
+      .row
+        = yield
